@@ -1,0 +1,127 @@
+
+@import "./../additional/variables.scss";
+
+.body {
+    box-sizing: initial;
+    
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+.button-primary {
+    display: flex;
+    justify-content: center;
+    background-color: #2ebc4f;
+    height: 60px;
+    color: $font-primary;
+        
+    border-radius: 5px;
+}
+
+.p {
+    font-size: 0.75rem;
+    color: $primary;
+    opacity: 0.8;
+
+    & > a {
+        color: $link;
+    }
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1024px;
+    width: 90%;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media screen and (max-width: $break-tablet) {
+        width: 75%;
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 50px;
+
+        .left {
+            text-align: center;
+            width: 75%;
+            flex: 0;
+        }
+        .right {
+            width: 75%;
+        }
+    }
+
+    @media screen and (max-width: $break-phone) {
+        width: 100%;
+        padding: 10px;
+        max-width: 500px;
+        .left {
+            text-align: center;
+            flex: 0;
+            width: 90%;
+        }
+        .right {
+            width: 90%;
+        }
+    }
+    
+}
+
+.left {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .description {
+        font-weight: 600;
+        line-height: 24px;
+        font-family:'Courier New', Courier, monospace;
+        color: $font-additional;
+
+    }
+}
+
+
+
+.right {
+    flex: 5;
+
+    .form {
+        color: $primary;
+        background-color: white;
+        border-radius: 5px;
+        padding: 30px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-box {
+        width: 100%;
+        label {
+            color: $secondary;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        input {
+            box-sizing: border-box;
+            height: 40px;
+            width: 100%;
+            border: 1px solid $font-additional;
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+    }
+}
+

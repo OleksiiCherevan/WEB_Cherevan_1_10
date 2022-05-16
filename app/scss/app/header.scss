@@ -1,0 +1,91 @@
+.header {
+    background-color: $primary;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+    padding-right: 100px;
+
+    @media screen and (max-width: $break-tablet) {
+        justify-content: space-between;
+        padding-right: 20px;
+        .nav  {
+            display: none;
+        }
+    }
+}
+
+.logo {
+    display: block;
+
+    height: 50px;
+    width: 50px;
+
+    margin-right: 1rem;
+
+    fill: $font-primary;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    height: 35px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #3f4448;
+    border-radius: 5px;
+
+    padding:0 10px;
+    margin-right: 20px;
+
+    &__input {
+        width: 160px;
+        padding: 5px 0;
+        &::placeholder { 
+            color: $font-primary;
+            opacity: 0.6;
+          }
+    }
+
+    &__slash {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 21px;
+        width: 19px;
+        border: solid 1px;
+        border-radius: 3px;
+        border-color: $font-additional;
+        color: $font-additional;
+    }
+
+    @media screen and (max-width: $break-laptop) {
+        display: none;
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 10px;    
+}
+
+.sign-up {
+    border: 1px solid $font-primary;
+    border-radius: 8px;
+    padding: 6px;
+}

@@ -1,0 +1,13 @@
+@import "./additional/font.scss";
+@import "./additional/reset.scss";
+@import "./additional/variables.scss";
+
+@import "./app/body.scss";
+@import "./app/header.scss";
+
+body {
+    background-color: $secondary;
+    color: $font-primary;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
